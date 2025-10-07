@@ -159,28 +159,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  margin-top: 20px;
+  gap: 40px; /* more offset between icons */
+  margin-top: 25px;
+}
+
+.social-icon .icon-bg {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px; /* rounded square */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Discord background */
+.social-icon.discord .icon-bg {
+  background-color: #5865F2;
+}
+
+/* TikTok background */
+.social-icon.tiktok .icon-bg {
+  background-color: #111;
 }
 
 .social-icon img {
   width: 50px;
   height: 50px;
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-/* Discord blue tint */
-.social-icon.discord img {
-  filter: invert(46%) sepia(76%) saturate(1465%) hue-rotate(222deg) brightness(97%) contrast(95%);
-}
-
-/* TikTok stays black */
-.social-icon.tiktok img {
-  filter: invert(0%);
+  filter: invert(1); /* make white icon inside colored square */
+  transition: transform 0.25s ease;
 }
 
 /* Hover effects */
+.social-icon:hover .icon-bg {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
 .social-icon:hover img {
-  transform: scale(1.15);
-  filter: brightness(1.2);
+  transform: scale(1.1);
 }
