@@ -158,39 +158,48 @@ body {
 .socials-grid {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  gap: 40px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .social-card {
-  background-color: #2b2b2b;
-  border-radius: 16px;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.2s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 180px;
+  height: 160px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .social-card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
   filter: invert(1);
 }
 
-.social-card.discord:hover {
+/* Discord Card */
+.social-card.discord {
   background-color: #5865F2;
+}
+.social-card.discord:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
 }
 
-.social-card.tiktok:hover {
+/* TikTok Card */
+.social-card.tiktok {
   background-color: #000000;
+}
+.social-card.tiktok:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
