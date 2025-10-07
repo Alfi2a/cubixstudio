@@ -155,51 +155,32 @@ body {
 #owners ul
 
 /* --- Socials Section --- */
-.socials-grid {
+.socials-inline {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 
-.social-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 160px;
-  border-radius: 16px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+.social-icon img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.social-card img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 12px;
-  filter: invert(1);
+/* Discord blue tint */
+.social-icon.discord img {
+  filter: invert(46%) sepia(76%) saturate(1465%) hue-rotate(222deg) brightness(97%) contrast(95%);
 }
 
-/* Discord Card */
-.social-card.discord {
-  background-color: #5865F2;
-}
-.social-card.discord:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
+/* TikTok stays black */
+.social-icon.tiktok img {
+  filter: invert(0%);
 }
 
-/* TikTok Card */
-.social-card.tiktok {
-  background-color: #000000;
-}
-.social-card.tiktok:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+/* Hover effects */
+.social-icon:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.2);
 }
