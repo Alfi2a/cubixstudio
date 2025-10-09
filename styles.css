@@ -166,7 +166,7 @@ body {
 }
 
 #socials p {
-  color: #ccc;
+  color: #b8c7ff;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
@@ -182,17 +182,18 @@ body {
 }
 
 #socials li {
-  background-color: rgba(0, 255, 100, 0.15);
-  border: 2px solid #00ff80;
+  background-color: rgba(0, 120, 255, 0.15); /* 💠 Slight blue tint */
+  border: 2px solid #00bfff; /* 💠 Bright cyan-blue border */
   border-radius: 20px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
   width: 90%;
   max-width: 500px;
 }
 
 #socials li:hover {
   transform: scale(1.03);
-  background-color: rgba(0, 255, 100, 0.25);
+  background-color: rgba(0, 160, 255, 0.25);
+  border-color: #33ccff;
 }
 
 #socials a {
@@ -212,6 +213,12 @@ body {
   border-radius: 15px;
   object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid #00bfff; /* 💠 Same blue border as box */
   background-color: #000;
   padding: 5px;
+  transition: border-color 0.2s ease;
+}
+
+#socials li:hover img {
+  border-color: #33ccff; /* 💠 Match hover color */
 }
